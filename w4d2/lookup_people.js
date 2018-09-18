@@ -30,7 +30,7 @@ client.connect((err) => {
     console.log(`Found '${result.rows.length}' person(s) by the name '${name}'`);
 
     result.rows.forEach(x => {
-      const final = ` - ${x.id}: '${x.first_name}', '${x.last_name}', born '${x.birthdate.toLocaleString().slice(0,-9)}'`
+      const final = ` - ${x.id}: ${x.first_name} ${x.last_name}, born '${x.birthdate.toLocaleString().slice(0,-9)}'`
       console.log(final);
     })
     client.end();
